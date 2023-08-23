@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+	<meta charset="UTF-8">
 	<title> Exemplo - API JanelaAviso </title>
 	<script type="text/javascript" language="JavaScript" src="fontes/apiJanelaAviso.js"></script>
 	<script type="text/javascript" language="JavaScript">
@@ -10,7 +11,7 @@
 			inicializarExemplo();
 			objAPIJanelaAviso.montaJanelaAviso(
 				'alert'
-				,'Exemplo - API JanelaAviso by GFL', 'Ol·, seja bem vindo ‡ ·rea de testes.'
+				,'Exemplo - API JanelaAviso by GFL', 'Ol√°, seja bem vindo √† √°rea de testes.'
 				, ''
 			);			
 		}
@@ -19,7 +20,7 @@
 			objAPIJanelaAviso = new apiJanelaAviso("objAPIJanelaAviso");
 			console.log(objAPIJanelaAviso);
 			
-			//DeclaraÁ„o obrigatÛria para os diretÛrios de arquivos necess·rios para a API
+			//Declara√ß√£o obrigat√≥ria para os diret√≥rios de arquivos necess√°rios para a API
 			//--------------------------------------------------------------------------//
 			objAPIJanelaAviso.strCaminhoPadraoArquivosFontesJanelaAviso = "fontes/";
 			objAPIJanelaAviso.strCaminhoPadraoArquivosEstilosJanelaAviso = "estilos/";
@@ -40,7 +41,7 @@
 		
 		function verExemplo(conteudo) {
 			objAPIJanelaAviso.blnBloquearPaginaFundoJanelaAviso = true;
-			objAPIJanelaAviso.montaJanelaAviso("alert", "Exemplo - API JanelaAviso by GFL", conteudo, '');
+			objAPIJanelaAviso.montaJanelaAviso(document.getElementById("tipoJanelaAviso").value, "Exemplo - API JanelaAviso by GFL", conteudo, '');
 		}		
 	</script>
 	<style type="text/css">
@@ -61,6 +62,11 @@
 	</style>
 </head>
 <body>
+	<select id="tipoJanelaAviso">
+		<option value="ALERT">ALERT</option>
+		<option value="CONFIRM">CONFIRM</option>
+		<option value="JANELA">JANELA</option>
+	</select>
 	<input type="text" value="" style="width:40%;" id="txtEnderecoJanelaAvisoTipoJanela" />
 	<a id="Link2ExemploJanelaAviso" onclick="verExemplo(document.getElementById('txtEnderecoJanelaAvisoTipoJanela').value);">Ver exemplo</a>
 </body>

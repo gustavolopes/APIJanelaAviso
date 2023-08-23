@@ -48,43 +48,43 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 		var cstNomeAlinhamentoCentroBotoesJanelaAviso = "CENTRO";
 		
 		this.inicializarAPIJanelaAviso = function() {
-			//CONFIGUR���ES GERAIS
+			//CONFIGURAÇÕES GERAIS
 			/***********************************************************************************************************/
-			//Armazena o local onde se encontram os arquivos JavaScript para a utiliza��o da API
+			//Armazena o local onde se encontram os arquivos JavaScript para a utilização da API
 			strCaminhoPadraoArquivosFontesJanelaAviso = this.strCaminhoPadraoArquivosFontesJanelaAviso;
-			//Armazena o local onde se encontram os arquivos CSS (Estilos) para a utiliza��o da API
+			//Armazena o local onde se encontram os arquivos CSS (Estilos) para a utilização da API
 			strCaminhoPadraoArquivosEstilosJanelaAviso = this.strCaminhoPadraoArquivosEstilosJanelaAviso;
-			//Armazena o local onde se encontram os arquivos Imagens (Fotos, �cones e etc) para a utiliza��o da API
+			//Armazena o local onde se encontram os arquivos Imagens (Fotos, ícones e etc) para a utilização da API
 			strCaminhoPadraoArquivosImagensJanelaAviso = this.strCaminhoPadraoArquivosImagensJanelaAviso;
-			//Verifica se n�o foi definido o local onde ser� criada a Janela Aviso, ent�o usa-se o local padr�o
+			//Verifica se não foi definido o local onde será criada a Janela Aviso, então usa-se o local padrão
 			if(typeof(this.objLocalJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.objLocalJanelaAviso == null || this.objLocalJanelaAviso == "") {
 				this.objLocalJanelaAviso = document.getElementsByTagName("body")[0];
 			}
-			//Verifica se n�o foi definida a largura da Janela de Aviso, ent�o usa-se um valor padr�o
+			//Verifica se não foi definida a largura da Janela de Aviso, então usa-se um valor padrão
 			if(typeof(this.fltLarguraJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.fltLarguraJanelaAviso == null || this.fltLarguraJanelaAviso.replace(cstSufixoPixelJanelaAviso,"") == "") {
 				this.fltLarguraJanelaAviso = "410";
 			}		
-			//Verifica se n�o foi definida a altura da Janela de Aviso, ent�o usa-se um valor padr�o
+			//Verifica se não foi definida a altura da Janela de Aviso, então usa-se um valor padrão
 			if(typeof(this.fltAlturaJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.fltAlturaJanelaAviso == null || this.fltAlturaJanelaAviso.replace(cstSufixoPixelJanelaAviso,"") == "") {
 				this.fltAlturaJanelaAviso = "125";
 			}
-			//Verifica se n�o foi informado o caminho para o arquivo de estilo da Janela de Aviso, ent�o o nome padr�o do mesmo
+			//Verifica se não foi informado o caminho para o arquivo de estilo da Janela de Aviso, então o nome padrão do mesmo
 			if(typeof(this.strNomeArquivoEstiloPadraoJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeArquivoEstiloPadraoJanelaAviso == null || this.strNomeArquivoEstiloPadraoJanelaAviso == "") {
 				this.strNomeArquivoEstiloPadraoJanelaAviso = "estiloJanelaAviso.css";
 			}
-			//Verifica se n�o foi definido para bloquear a p�gina ao fundo
+			//Verifica se não foi definido para bloquear a página ao fundo
 			if(typeof(this.blnBloquearPaginaFundoJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.blnBloquearPaginaFundoJanelaAviso == null) {
 				this.blnBloquearPaginaFundoJanelaAviso = false;
 			}		
-			//Verifica se n�o foi definido o local da p�gina a ser bloqueada, ent�o utiliza-se de um valor padr�o para o local
+			//Verifica se não foi definido o local da página a ser bloqueada, então utiliza-se de um valor padrão para o local
 			if(typeof(this.objLocalPaginaBloquearJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.objLocalPaginaBloquearJanelaAviso == null || this.objLocalPaginaBloquearJanelaAviso == "") {
 				this.objLocalPaginaBloquearJanelaAviso = document;
 			}
-			//Verifica se n�o foi definido o objeto do formul�rio utilizado
+			//Verifica se não foi definido o objeto do formulário utilizado
 			if(typeof(this.objFormularioUtilizadoJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.objFormularioUtilizadoJanelaAviso == null) {
 				this.objFormularioUtilizadoJanelaAviso = "";
 			}
-			//Verifica se n�o foi informado o alinhamento dos bot�es da Janela Aviso
+			//Verifica se não foi informado o alinhamento dos botões da Janela Aviso
 			if(typeof(this.strAlinhamentoBotoesJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strAlinhamentoBotoesJanelaAviso == null || this.strAlinhamentoBotoesJanelaAviso == "") {
 				this.strAlinhamentoBotoesJanelaAviso = "center";
 			}
@@ -106,53 +106,53 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			}				
 			/***********************************************************************************************************/
 			
-			//CONFIGUR���ES ALERT
+			//CONFIGURAÇÕES ALERT
 			/***********************************************************************************************************/
-			//Verifica se n�o foi definido um novo nome para o bot�o OK da Janela do tipo ALERT, ent�o ser� usado o padr�o
+			//Verifica se não foi definido um novo nome para o bot�o OK da Janela do tipo ALERT, então será usado o padrão
 			if(typeof(this.strNomeBotaoOkAlertJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeBotaoOkAlertJanelaAviso == null || this.strNomeBotaoOkAlertJanelaAviso == "") {
 				this.strNomeBotaoOkAlertJanelaAviso = "OK";				
 			}
-			//Verifica se n�o foi informado o arquivo de imagem para o �cone da Janela Aviso do tipo ALERT
+			//Verifica se não foi informado o arquivo de imagem para o �cone da Janela Aviso do tipo ALERT
 			if(typeof(this.strNomeArquivoIconeAlertJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeArquivoIconeAlertJanelaAviso == null || this.strNomeArquivoIconeAlertJanelaAviso == "") {
 				this.strNomeArquivoIconeAlertJanelaAviso = "";
 			}
 			/***********************************************************************************************************/
 			
-			//CONFIGUR���ES CONFIRM
+			//CONFIGURAÇÕES CONFIRM
 			/***********************************************************************************************************/
-			//Verifica se n�o foi definido um novo nome para o bot�o OK da Janela do tipo CONFIRM, ent�o utiliza-se o nome padr�o
+			//Verifica se não foi definido um novo nome para o bot�o OK da Janela do tipo CONFIRM, então utiliza-se o nome padrão
 			if(typeof(this.strNomeBotaoOkConfirmJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeBotaoOkConfirmJanelaAviso == null || this.strNomeBotaoOkConfirmJanelaAviso == "") {
 				this.strNomeBotaoOkConfirmJanelaAviso = "OK";
 			}
-			//Verifica se n�o foi definido um novo nome para o bot�o CANCELAR da Janela do tipo CONFIRM, ent�o utiliza-se o nome padr�o
+			//Verifica se não foi definido um novo nome para o bot�o CANCELAR da Janela do tipo CONFIRM, então utiliza-se o nome padrão
 			if(typeof(this.strNomeBotaoCancelarConfirmJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeBotaoCancelarConfirmJanelaAviso == null || this.strNomeBotaoCancelarConfirmJanelaAviso == "") {
 				this.strNomeBotaoCancelarConfirmJanelaAviso = "Cancelar";
 			}
-			//Verifica se n�o foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo CONFIRM
+			//Verifica se não foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo CONFIRM
 			if(typeof(this.strNomeArquivoIconeConfirmJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeArquivoIconeConfirmJanelaAviso == null || this.strNomeArquivoIconeConfirmJanelaAviso == "") {
 				this.strNomeArquivoIconeConfirmJanelaAviso = "";
 			}
 			/***********************************************************************************************************/
 			
-			//CONFIGUR���ES JANELA
+			//CONFIGURAÇÕES JANELA
 			/***********************************************************************************************************/
-			//Verifica se deve redimensionar a Janela Aviso do tipo janela, o padr�o � sim/true
+			//Verifica se deve redimensionar a Janela Aviso do tipo janela, o padrão � sim/true
 			if(typeof(this.blnRedimensionarJanelaJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.blnRedimensionarJanelaJanelaAviso == null) {
 				this.blnRedimensionarJanelaJanelaAviso = true;	
 			}
-			//Verifica se n�o foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo JANELA
+			//Verifica se não foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo JANELA
 			if(typeof(this.strNomeArquivoIconeJanelaJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeArquivoIconeJanelaJanelaAviso == null || this.strNomeArquivoIconeJanelaJanelaAviso == "") {
 				this.strNomeArquivoIconeJanelaJanelaAviso = "";
 			}
 			/***********************************************************************************************************/
 
-			//CONFIGUR���ES PERSONALIZADO
+			//CONFIGURAÇÕES PERSONALIZADO
 			/***********************************************************************************************************/			
-			//Verifica se n�o foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo PERSONALIZADO
+			//Verifica se não foi informado o nome do arquivo de imagem para o �cone da Janela Aviso do tipo PERSONALIZADO
 			if(typeof(this.strNomeArquivoIconePersonalizadoJanelaAviso) == cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.strNomeArquivoIconePersonalizadoJanelaAviso == null || this.strNomeArquivoIconePersonalizadoJanelaAviso == "") {
 				this.strNomeArquivoIconePersonalizadoJanelaAviso = "";
 			}  
-			//Verifica se foi preenchida a vari�vel que define a exibi��o ou n�o do bot�o de minimizar								
+			//Verifica se foi preenchida a vari�vel que define a exibi��o ou não do bot�o de minimizar								
 			if(typeof(this.blnExibirBotoaMinimizarPersonalizadoJanelaAviso) != cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.blnExibirBotoaMinimizarPersonalizadoJanelaAviso != null) {
 				if(this.blnExibirBotoaMinimizarPersonalizadoJanelaAviso) {
 					strEstiloVisibilityMinimizarPersonalizadoJanelaAviso = "style='visibility: show;'";
@@ -161,7 +161,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 					strEstiloVisibilityMinimizarPersonalizadoJanelaAviso = "style='visibility: hidden;'";
 				}
 			}
-			//Verifica se foi preenchida a vari�vel que define a exibi��o ou n�o do bot�o de maximizar
+			//Verifica se foi preenchida a vari�vel que define a exibi��o ou não do bot�o de maximizar
 			if(typeof(this.blnExibirBotoaMaximizarPersonalizadoJanelaAviso) != cstVariavelTipoUndefinedJanelaAviso.toLowerCase() || this.blnExibirBotoaMaximizarPersonalizadoJanelaAviso != null) {
 				if(this.blnExibirBotoaMaximizarPersonalizadoJanelaAviso) {
 					strEstiloVisibilityMaximizarPersonalizadoJanelaAviso = "style='visibility: show;'";
@@ -175,7 +175,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 		
 	 	this.montaJanelaAviso = function(strNomeTipoJanelaAviso, strTituloJanelaAviso, strConteudoJanelaAviso, strConfiguracoesExtras) {	
 	 		try {
-	 			//Chamada da fun��o respons�vel pela inicializa��o das configura��es definidas para a API
+	 			//Chamada da função respons�vel pela inicializa��o das configura��es definidas para a API
 	 			this.inicializarAPIJanelaAviso();
 
 	 			//Armazena o tipo atual da Janela Aviso
@@ -304,7 +304,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 		   			objJanelaAviso.style.MozOpacity = ((100/100));
 		   		}
 		   		
-		   		//Chamada da fun��o que realiza o include dos estilos para a API
+		   		//Chamada da função que realiza o include dos estilos para a API
 	        	this.includeEstiloJanelaAviso();
 				
 	        	switch(strNomeTipoAtualJanelaAviso) {
@@ -411,7 +411,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 		        									" 					<td id='iconeRodapeBarraStatusJanelaAviso" + cstTipoJanelaJanelaAviso + "' class='janelaAvisoIconeRodapeBarraStatus'>" +
 		        									" 					</td>" +
 		        									" 					<td id='informacoesRodapeBarraStatusJanelaAviso" + cstTipoJanelaJanelaAviso + "' class='janelaAvisoInformacoesRodapeBarraStatus'>" +
-		        									"						Abrindo p�gina: " + strURLPagina + "" +
+		        									"						Abrindo página: " + strURLPagina + "" +
 		        									" 					</td>" +
 		        									" 					<td id='redimensionarIconeRodapeJanelaAviso" + cstTipoJanelaJanelaAviso + "' class='janelaAvisoRedimensionarIconeRodapeBarraStatus' " + strEscondeRedimensionarJanelaAviso +">" +
 		        									"						<img src='" + strCaminhoPadraoArquivosImagensJanelaAviso + "IconeRedimensionar.gif' onmousedown=\"" + strNomeObjetoAPI + ".redimensionarJanelaAviso(event, '" + cstTipoJanelaJanelaAviso + "');\" ondragstart='return false;' style='vertical-align: bottom;'>" +
@@ -464,7 +464,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 					objJanelaAviso.style.left = fltPosicaoInicialEsquerdaJanelaAviso + cstSufixoPixelJanelaAviso;
 				}
 				
-				//Verifica se o tamanho est� de acordo com a sua �rea, caso contr�rio ele ser� ...
+				//Verifica se o tamanho est� de acordo com a sua �rea, caso contr�rio ele será ...
 				this.verificaTamanhoTextoTituloJanelaAviso(strTituloJanelaAviso, strNomeTipoAtualJanelaAviso);
 				
 				return objJanelaAviso;
@@ -506,7 +506,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - includeEstiloJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}			
 		}
@@ -571,7 +571,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - redimensionarJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}
 		}
@@ -613,7 +613,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 					document.getElementById("janelaAvisoIframeSobreposicao" + strNomeTipoJanelaAviso).style.width = fltLarguraAtualTituloJanelaAviso + cstSufixoPixelJanelaAviso;
 					document.getElementById("tituloCabecalhoJanelaAviso" + strNomeTipoJanelaAviso).style.width = "100%";
 					
-					//Reposiciona a janela ao rodap� da p�gina e � esquerda da janela do navegador
+					//Reposiciona a janela ao rodap� da página e � esquerda da janela do navegador
 					objJanelaAviso.style.position = "absolute";
 					objJanelaAviso.style.left = "0" + cstSufixoPixelJanelaAviso;
 					document.getElementById("janelaAviso" + strNomeTipoJanelaAviso).style.left = "0" + cstSufixoPixelJanelaAviso;
@@ -722,7 +722,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - minimizarJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}
 		}
@@ -790,7 +790,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - maximizarJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}
 		}
@@ -822,7 +822,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 					  	}
 					break;
 					case cstTipoConfirmJanelaAviso:
-					//Redimensiona os bot�es para Janela Aviso do tipo CONFIRM
+					//Redimensiona os botões para Janela Aviso do tipo CONFIRM
 						var objBotaoOKConfirmJanelaAviso = document.getElementById("btnOKConfirmJanelaAviso");
 						var objBotaoCancelarConfirmJanelaAviso = document.getElementById("btnCancelarConfirmJanelaAviso");
 						
@@ -842,7 +842,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 						  		objBotaoCancelarConfirmJanelaAviso.style.width = (fltLarguraMaiorBotaoConfirmJanelaAviso + objTesteTamanhoTextoBotaoJanelaAviso.offsetWidth) + cstSufixoPixelJanelaAviso;
 						  	}
 						  	else {
-					  			alert("A��o inv�lida: a largura atual dos bot�es, � maior que a da caixa de mensagem.\nFavor diminuir o texto dos bot�es ou aumentar a largura da caixa.");
+					  			alert("A��o inv�lida: a largura atual dos botões, � maior que a da caixa de mensagem.\nFavor diminuir o texto dos botões ou aumentar a largura da caixa.");
 					  			this.fecharJanelaAviso(cstTipoConfirmJanelaAviso);
 						  	}
 					  	}
@@ -853,7 +853,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - redimensionarBotaoJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}
 		}
@@ -906,7 +906,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 			catch(strErro) {
 				var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - exibirImagemIconeJanelaAviso. ";
 				strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-				window.status = strMsgErro;
+				console.log(strMsgErro);
 				return true;				
 			}
 		}
@@ -925,7 +925,7 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 				catch(strErro) {
 					var strMsgErro = "Ocorreu um erro com a API Janela de Aviso - fecharJanelaAviso. ";
 					strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-					window.status = strMsgErro;
+					console.log(strMsgErro);
 					return true;
 				}
 			}
@@ -934,13 +934,13 @@ function apiJanelaAviso(strNomeObjetoAPI) {
 	catch(strErro) {
 		var strMsgErro = "Ocorreu um erro com a API Janela de Aviso. ";
 		strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-		window.status = strMsgErro;
+		console.log(strMsgErro);
 		return true;
 	}
 }
 
 //-------------------------------------------------------------------------------------------------------------
-//-- Fun��o respons�vel por centralizar a Janela Aviso
+//-- função respons�vel por centralizar a Janela Aviso
 function centralizarJanelaAviso(elemento) {
 	this.pegarAlturaNavegadorJanelaAviso = function() {
 		var alturaJanela = 0;
@@ -982,7 +982,7 @@ function centralizarJanelaAviso(elemento) {
 		var larguraJanela = this.pegarLarguraNavegadorJanelaAviso();
 		var alturaJanela = this.pegarAlturaNavegadorJanelaAviso();
 		if (larguraJanela > 0 && alturaJanela > 0) {
-			//Verifica se o ELEMENTO passado n�o � um objeto
+			//Verifica se o ELEMENTO passado não � um objeto
 			if(typeof(elemento) != "object") {
 				var objElemento = document.getElementById(elemento);
 			}
@@ -1023,7 +1023,7 @@ function centralizarJanelaAviso(elemento) {
 		}
 	}
 }
-//-- FIM - Fun��o respons�vel por centralizar a Janela Aviso
+//-- FIM - função respons�vel por centralizar a Janela Aviso
 //-------------------------------------------------------------------------------------------------------------
 
 function adicionarEventoJanelaAviso(objElemento, strTipoEvento, Funcao, blnPropagar) {
@@ -1168,7 +1168,7 @@ function evitarPropagacaoEventoMoverJanelaAviso(objEvento) {
 
 function modalJanelaAviso(blnBloquear, objLocalBloqueado) {
 	try {
-		//Verifica se a DIV que bloqueia a p�gina, ainda n�o foi criada
+		//Verifica se a DIV que bloqueia a página, ainda não foi criada
 		if(!document.getElementById("divModalJanelaAviso")) {
 			objBloqueiaPagina = document.createElement("div");
 			objBloqueiaPagina.setAttribute("id","divModalJanelaAviso");
@@ -1283,9 +1283,9 @@ function modalJanelaAviso(blnBloquear, objLocalBloqueado) {
 		}
 	}
 	catch(strErro) {
-		var strMsgErro = "Ocorreu um erro com a fun��o modalJanelaAviso. ";
+		var strMsgErro = "Ocorreu um erro com a função modalJanelaAviso. ";
 		strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-		window.status = strMsgErro;
+		console.log(strMsgErro);
 		return true;
 	}
 }
@@ -1345,9 +1345,9 @@ function cancelandoEventoDesencadeadoJanelaAviso(objLocalDesencadeado, objEvento
 		}
 	}
 	catch(strErro) {
-		var strMsgErro = "Ocorreu um erro com a fun��o cancelandoEventoDesencadeadoJanelaAviso. ";
+		var strMsgErro = "Ocorreu um erro com a função cancelandoEventoDesencadeadoJanelaAviso. ";
 		strMsgErro = strMsgErro + "Erro: " + strErro.description + " ";
-		window.status = strMsgErro;
+		console.log(strMsgErro);
 		return true;
 	}	
 }
