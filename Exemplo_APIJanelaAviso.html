@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Exemplo - API JanelaAviso </title>
+	<script type="text/javascript" language="JavaScript" src="fontes/apiJanelaAviso.js"></script>
+	<script type="text/javascript" language="JavaScript">
+		var objAPIJanelaAviso;
+		
+		window.onload = function() {
+			inicializarExemplo();
+			objAPIJanelaAviso.montaJanelaAviso(
+				'alert'
+				,'Exemplo - API JanelaAviso by GFL', 'Olá, seja bem vindo à área de testes.'
+				, ''
+			);			
+		}
+		
+		function inicializarExemplo() {
+			objAPIJanelaAviso = new apiJanelaAviso("objAPIJanelaAviso");
+			console.log(objAPIJanelaAviso);
+			
+			//Declaração obrigatória para os diretórios de arquivos necessários para a API
+			//--------------------------------------------------------------------------//
+			objAPIJanelaAviso.strCaminhoPadraoArquivosFontesJanelaAviso = "fontes/";
+			objAPIJanelaAviso.strCaminhoPadraoArquivosEstilosJanelaAviso = "estilos/";
+			objAPIJanelaAviso.strCaminhoPadraoArquivosImagensJanelaAviso = "imagens/";
+			//--------------------------------------------------------------------------//
+			objAPIJanelaAviso.objLocalJanelaAviso = window.document.parentDocument;
+			objAPIJanelaAviso.blnBloquearPaginaFundoJanelaAviso = false;
+			objAPIJanelaAviso.strLarguraJanelaAviso = "450";
+			objAPIJanelaAviso.strAlturaJanelaAviso = "250";
+			objAPIJanelaAviso.strNomeBotaoOkAlertJanelaAviso = "Fechar";
+			objAPIJanelaAviso.strAlinhamentoBotoesJanelaAviso = "centro";
+			objAPIJanelaAviso.strNomeArquivoIconeAlertJanelaAviso = "IconeCabecalhoJanelaAviso_Alert.gif";
+			objAPIJanelaAviso.strNomeArquivoIconeJanelaJanelaAviso = "IconeCabecalhoJanelaAviso_Janela.gif";
+			objAPIJanelaAviso.blnExibirBotoaMinimizarPersonalizadoJanelaAviso = true;
+			objAPIJanelaAviso.blnExibirBotoaMaximizarPersonalizadoJanelaAviso = false;
+			objAPIJanelaAviso.blnRedimensionarJanelaJanelaAviso = true;		
+		}
+		
+		function verExemplo(conteudo) {
+			objAPIJanelaAviso.blnBloquearPaginaFundoJanelaAviso = true;
+			objAPIJanelaAviso.montaJanelaAviso("alert", "Exemplo - API JanelaAviso by GFL", conteudo, '');
+		}		
+	</script>
+	<style type="text/css">
+		a {
+			padding: 4px;
+			text-align: center;
+			cursor: pointer;
+			border-width: 2px;
+			border-style: outset;
+			font-family: Arial;
+			color: darkgreen;
+			font-weight: bolder;
+			font-size: 12px;
+		}
+		a:active {
+			border-style: inset;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" value="" style="width:40%;" id="txtEnderecoJanelaAvisoTipoJanela" />
+	<a id="Link2ExemploJanelaAviso" onclick="verExemplo(document.getElementById('txtEnderecoJanelaAvisoTipoJanela').value);">Ver exemplo</a>
+</body>
+</html>
